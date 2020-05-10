@@ -11,6 +11,7 @@ let config = {
       path: path.resolve(__dirname, "./public"),
       filename: "./script.js"
     },
+    mode: 'development',
     module: {
         rules: [{
             test: /\.js$/,
@@ -36,7 +37,7 @@ let config = {
         open: true,
         hot: true
       },
-      devtool: "eval-source-map"
+      devtool: "eval-source-map",
 }
 
 module.exports = config;
