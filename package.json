@@ -40,5 +40,8 @@
     "webpack-cli": "^3.3.11",
     "webpack-dashboard": "^3.2.0",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
   }
 }

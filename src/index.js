@@ -1,3 +1,5 @@
-document.write("Je débute avec Webpack !");
-let a = "J'apprends Webpack !";
-require("../assets/stylesheets/test.scss");
+// STYLES
+require("./assets/styles/app.scss");
+
+// SCRIPTS
+require("./assets/scripts/main.js");

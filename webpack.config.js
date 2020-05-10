@@ -9,7 +9,7 @@ let config = {
     entry: "./src/index.js",
     output: {
       path: path.resolve(__dirname, "./public"),
-      filename: "./bundle.js"
+      filename: "./script.js"
     },
     module: {
         rules: [{
