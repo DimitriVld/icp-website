@@ -7,7 +7,7 @@
 
 // C
 .container-dft {
-  display: block;
+  @extend %container;
 }
 
 .center-dft {

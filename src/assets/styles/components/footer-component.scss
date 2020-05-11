@@ -1,0 +1,37 @@
+.footer-component{
+    background-color: $black;
+    color: $white;
+
+    .container-dft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+
+        .nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+
+            li{
+                align-self: center;
+                
+                a{
+                    transition: all .3s;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+
+        hr{
+            margin: 15px 0;
+            width: 100%;
+            height: 2px;
+            background: transparent linear-gradient(90deg, #FFFFFF 0%, #CC0F37 100%) 0% 0% no-repeat padding-box;
+        }
+    }
+}

@@ -3,6 +3,16 @@
 // B
 
 // C
+%container{
+    display: block;
+    margin: auto;
+    width: calc(100% - 150px);
+    max-width: 1440px;
+
+    @include tablet-landscape{
+        width: calc(100% - 30px);
+    }
+}
 
 // D
 

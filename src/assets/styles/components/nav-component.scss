@@ -1,0 +1,41 @@
+.nav-component{
+    background-color: $black;
+    color: $white;
+    .container-dft{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px;
+
+        .nav{
+            display: flex;
+            flex-direction: row;
+
+            li{
+                align-self: center;
+                margin-right: 44px;
+                
+                a{
+                    transition: all .3s;
+                    &:hover{
+                        color: $red;
+                    }
+                    img{
+                        width: 49px;
+                    }
+                }
+            }
+        }
+
+        .rdv{
+            padding: 10px 25px;
+            border: 1px solid $white;
+            border-radius: 20px;
+            transition: all .3s;
+            &:hover{
+                color: $red;
+                border-color: $red;
+            }
+        }
+    }
+}
