@@ -1,21 +1,37 @@
 // First title
 %title-1{
-   display: initial;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 2rem;
+    color: $white;
+    text-shadow: 0px 3px 6px #00000080;
+    text-transform: uppercase;
 }
 
 // Second title
 %title-2{
-    display: initial;
+    @extend %title-1;
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 // Third title
 %title-3{
-    display: initial;
+    @extend %title-1;
+    color: $black;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 // Fourth title
 %title-4{
-    display: initial;
+    @extend %title-1;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 // Last title

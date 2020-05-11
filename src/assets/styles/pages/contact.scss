@@ -1,0 +1,19 @@
+.contact-page{
+
+    // HEADER
+    .header-contact{
+        padding: 164px 0;
+        background-image: url('/images/bg-contact.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h1{
+            @extend %title-1;
+        }
+    }
+
+    .section-contact{
+        padding: 100px 0;
+        
+    }
+}

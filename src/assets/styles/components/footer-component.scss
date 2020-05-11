@@ -33,5 +33,9 @@
             height: 2px;
             background: transparent linear-gradient(90deg, #FFFFFF 0%, #CC0F37 100%) 0% 0% no-repeat padding-box;
         }
+
+        h4{
+            @extend %title-4;
+        }
     }
 }
