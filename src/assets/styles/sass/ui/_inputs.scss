@@ -22,7 +22,14 @@
 
 // D
 %default-ipt {
-  display: inherit;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  padding: 18px 15px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 4px 36px #00000015;
 }
 
 // E
@@ -32,7 +39,8 @@
 
 // F
 %fieldset {
-  display: inherit;
+  margin-top: 20px;
+  width: 100%;
 }
 
 // G
@@ -47,7 +55,10 @@
 
 // L
 %label {
-  display: inherit;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  color: $black;
 }
 
 %legend {
@@ -91,7 +102,12 @@
 
 // S
 %submit-ipt {
-  display: inherit;
+  display: block;
+  padding: 8px 20px;
+  background-color: $red;
+  border-radius: 20px;
+  color: $white;
+  font-size: 1em;
 }
 
 %select-ipt {
@@ -108,7 +124,10 @@
 }
 
 %textarea-ipt {
-  display: inherit;
+  @extend %default-ipt;
+  width: 100%;
+  height: 140px;
+  resize: none;
 }
 
 // W

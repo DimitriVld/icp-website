@@ -17,14 +17,16 @@
     color: $black;
     font-size: 1.8rem;
     font-weight: bold;
+    text-shadow: initial;
 }
 
 // Third title
 %title-3{
     @extend %title-1;
     color: $black;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
+    text-shadow: initial;
 }
 
 // Fourth title
@@ -32,6 +34,7 @@
     @extend %title-1;
     font-size: 1rem;
     font-weight: normal;
+    text-shadow: initial;
 }
 
 // Last title

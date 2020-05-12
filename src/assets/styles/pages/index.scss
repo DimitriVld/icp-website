@@ -1,0 +1,13 @@
+.index-page{
+    // HEADER
+    .header-index{
+        padding: 200px 0 140px;
+        background-image: url('/images/bg-home.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h1{
+            @extend %title-1;
+        }
+    }
+}
