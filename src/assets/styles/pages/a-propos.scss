@@ -1,4 +1,27 @@
 .a-propos-page{
+    // GENERAL
+    .points{
+        width: 100%;
+        height: 25px;
+        background-image: url('/icons/point-icon@2x.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2{
+            @extend %title-2;
+            margin: 0 20px;
+            width: auto;
+            white-space: nowrap;
+        }
+    }
+
     // HEADER
     .header-propos{
         padding: 164px 0;
@@ -11,6 +34,174 @@
         }
     }
 
-    
+    // SECTION PROPOS 1
+    .section-propos-1{
+        p{
+            margin-top: 50px;
+            text-align: center;
+            line-height: 20px;
+        }
+    }
 
+    // SECTION PROPOS 2
+    .section-propos-2{
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet-portrait{
+            flex-direction: column;
+        }
+
+        .title{
+            display: none;
+
+            @include tablet-portrait{
+                display: flex;
+            }
+
+            h2{
+                margin: 0 5px;
+            }
+        }
+
+        .textes{
+            flex: 40%;
+            padding: 0 30px;
+            
+            @include tablet-portrait{
+                text-align: center;
+            }
+
+            h2{
+                @extend %title-2;
+                text-align: left;
+
+                @include tablet-portrait{
+                    display: none;
+                }
+            }
+
+            .points{
+                margin-top: 30px;
+
+                @include tablet-portrait{
+                    display: none;
+                }
+            }
+
+            .list{
+                margin-top: 30px;
+
+                li {
+                    margin-top: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        img{
+            width: 65%;
+
+            @include tablet-portrait{
+                display: none;
+            }
+        }
+    }
+
+    // SECTION PROPOS 3
+    .section-propos-3{
+        .card{
+            display: flex;
+            margin: 65px auto 0;
+            width: 60%;
+            min-height: 300px;
+            border-radius: 6px;
+            box-shadow: 0px 6px 10px #00000033;
+
+            @include tablet-landscape{
+                flex-direction: column-reverse;
+            }
+
+            @include tablet-portrait{
+                width: 100%;
+            }
+
+            .descriptions{
+                flex: 1;
+                padding: 30px 10px;
+
+                h3{
+                    @extend %title-3;
+                    position: relative;
+                    margin: auto;
+                    width: max-content;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 5px;
+                        top: 6px;
+                        display: block;
+                        height: 15px;
+                        width: 100%;
+                        background: #CC0F3733 0% 0% no-repeat padding-box;
+                    }
+                }
+
+                .points{
+                    margin-top: 25px;
+                }
+
+                p{
+                    width: 90%;
+                    margin: 25px auto 0;
+                    text-align: center;
+                    line-height: 20px;
+                }
+            }
+
+            .photo{
+                width: 45%;
+                background-color: #AAA;
+
+                @include tablet-landscape{
+                    height: 250px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // SECTION PROPOS 4
+    .section-propos-4{
+        p{
+            margin-top: 50px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .certifications{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+
+            @include media(860px){
+                flex-direction: column;
+            }
+
+            .certif{
+                padding: 17px 130px;
+                border-radius: 6px;
+                box-shadow: 0px 6px 10px #00000033;
+
+                @include media(860px){
+                    margin: 25px 0;
+                    padding: 17px 0;
+
+                    img{
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
 }
