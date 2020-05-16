@@ -15,8 +15,9 @@ $('.slick').slick({
           breakpoint: 1024,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: .5,
-            centerMode: false,
+            centerMode: true,
+            draggable: false,
+            autoplay: false,
           }
         }
       ]

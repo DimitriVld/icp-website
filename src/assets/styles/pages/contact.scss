@@ -40,6 +40,7 @@
 
             @include tablet-portrait{
                 margin-top: 30px;
+                padding: 0;
             }
 
             h2{
@@ -89,6 +90,7 @@
             padding: 0 30px;
 
             @include tablet-portrait{
+                padding: 0;
                 .points{
                     display: none;
                 }

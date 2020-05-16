@@ -2,11 +2,19 @@
     position: relative;
     background-color: $black;
     color: $white;
+    z-index: 100;
+    @include media(700px){
+        position: fixed;
+        width: 100%;
+    }
     .container-dft{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 13px;
+        @include media(700px){
+            padding: 0 13px;
+        }
 
         .logo{
             display: none;
@@ -21,14 +29,14 @@
         .nav{
             display: flex;
             transition: all 0.5s .1s;
-            z-index: 1;
+            z-index: 100;
 
             @include media(700px){
                 position: absolute;
                 bottom: 0;
                 left: 50%;
                 transform: translate(-50%, 100%);
-                width: 100%;
+                width: 105%;
                 height: 0px;
                 flex-direction: column;
                 overflow: hidden;

@@ -184,6 +184,7 @@
                 color: $red;
                 font-size: 1em;
                 transition: all .5s;
+                white-space: nowrap;
                 &:hover{
                     background-color: $red;
                     color: $white;
