@@ -499,6 +499,7 @@ textarea {
   border: none;
   border-radius: 6px;
   padding: 18px 15px;
+  font-size: 1em;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 4px 36px #00000015; }
 
@@ -774,6 +775,17 @@ textarea {
       margin-top: 30px;
       float: right;
       cursor: pointer; }
+    .contact-page .section-contact form .message-form {
+      margin-top: 20px;
+      padding: 10px 0;
+      text-align: center;
+      color: #fff; }
+      .contact-page .section-contact form .message-form.error {
+        display: block;
+        background-color: #CC0034; }
+      .contact-page .section-contact form .message-form.success {
+        display: block;
+        background-color: #5CD961; }
   .contact-page .section-contact .right-contact {
     flex: 1;
     display: flex;

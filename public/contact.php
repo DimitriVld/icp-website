@@ -1,3 +1,85 @@
+<?php
+
+/* Si le formulaire est envoyé alors on fait les traitements */
+if (isset($_POST['envoye']))
+{
+  /* Récupération des valeurs des champs du formulaire */
+  $nom = $_POST['nom'];
+  $entreprise = $_POST['entreprise'];
+  $telephone = $_POST['telephone']; 
+  $expediteur = $_POST['email']; 
+  $sujet = $_POST['sujet']; 
+  $message = $_POST['message'];
+
+  /* Expression régulière permettant de vérifier si le 
+  * format d'une adresse e-mail est correct */
+  $regex_mail = '/^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$/i';
+ 
+  /* Expression régulière permettant de vérifier qu'aucun 
+  * en-tête n'est inséré dans nos champs */
+  $regex_head = '/[\n\r]/';
+
+  if($_SERVER['HTTP_REFERER'] != 'http://icp-plomberie.fr/contact.php')
+  {
+    header('Location: http://icp-plomberie.fr');
+  } elseif (
+    empty($nom)
+    || empty($expediteur) 
+    || empty($sujet) 
+    || empty($message)
+  )
+  {
+    $alert = 'error';
+    $alertMessage = 'Tous les champs requis doivent être renseignés';
+  } elseif (!preg_match($regex_mail, $expediteur))
+  {
+    $alert = 'error';
+    $alertMessage = 'L\'adresse '.$expediteur.' n\'est pas valide';
+  } elseif (preg_match($regex_head, $expediteur) 
+    || preg_match($regex_head, $nom) 
+    || preg_match($regex_head, $sujet))
+  {
+    $alert = 'error';
+    $alertMessage = 'En-têtes interdites dans les champs du formulaire';
+  } elseif (!isset($_COOKIE['sent']))
+  {
+    /* Destinataire (votre adresse e-mail) */
+    $to = 'dimitri.vildina@gmail.com';
+      
+    /* Construction du message */
+    $msg  = 'Bonjour,'."\r\n\r\n";
+    $msg .= 'Ce mail a été envoyé depuis Icp-plomberie.fr par '.$nom."\r\n\r\n";
+    $msg .= 'Voici le message qui vous est adressé :'."\r\n";
+    $msg .= "\r\n";
+    $msg .= $message."\r\n";
+    $msg .= "\r\n";
+
+    /* En-têtes de l'e-mail */
+    $headers = 'From: '.$nom.' <contact@icp-plomberie.fr>'."\r\n\r\n";
+
+    /* Envoi de l'e-mail */
+    if (mail($to, $sujet, $msg, $headers))
+    {
+      $alert = 'success';
+      $alertMessage = 'E-mail envoyé avec succès';
+
+      setcookie("sent", "1", time() + 120);
+
+      unset($_POST);
+    }
+    else
+    {
+      $alert = 'error';
+      $alertMessage = 'Erreur d\'envoi de l\'e-mail';
+    }
+  } else
+  {
+    unset($_POST);
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,7 +106,7 @@
     <!-- SECTION CONTACT -->
     <section class="section-contact container-dft">
       <!-- Formulaire -->
-      <form action="send_email.php" method="POST">
+      <form action="contact.php" method="POST">
         <h2>Formulaire de contact</h2>
         <div class="points"></div>
         <h3>Parlez-nous de vos besoins</h3>
@@ -36,7 +118,7 @@
 
         <fieldset>
           <label for="nom">Nom (requis)*</label>
-          <input id="nom" name="nom" type="text" placeholder="Nom ...">
+          <input id="nom" name="nom" type="text" placeholder="Nom ..." required>
         </fieldset>
 
         <fieldset>
@@ -51,18 +133,20 @@
 
         <fieldset>
           <label for="email">Email (requis)*</label>
-          <input id="email" name="email" type="email" placeholder="Email ...">
+          <input id="email" name="email" type="email" placeholder="Email ..." required>
         </fieldset>
 
         <fieldset>
-          <label for="sujet">Sujet</label>
-          <input id="sujet" name="sujet" type="text" placeholder="Sujet ...">
+          <label for="sujet">Sujet (requis)*</label>
+          <input id="sujet" name="sujet" type="text" placeholder="Sujet ..." required>
         </fieldset>
 
         <fieldset>
           <label for="message">Message (requis)*</label>
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Message ..."></textarea>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Message ..." required></textarea>
         </fieldset>
+
+        <p class="message-form <?=$alert?>"><?php echo $alertMessage ?></p>
 
         <input type="submit" name="envoye" value="Envoyer"/>
       </form>

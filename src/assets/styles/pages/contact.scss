@@ -81,6 +81,23 @@
                 float: right;
                 cursor: pointer;
             }
+
+            .message-form{
+                margin-top: 20px;
+                padding: 10px 0;
+                text-align: center;
+                color: $white;
+                
+                &.error{
+                    display: block;
+                    background-color: #CC0034;
+                }
+            
+                &.success{
+                    display: block;
+                    background-color: #5CD961;
+                }
+            }
         }
 
         .right-contact{
