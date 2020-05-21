@@ -44,7 +44,7 @@ if (isset($_POST['envoye']))
   } elseif (!isset($_COOKIE['sent']))
   {
     /* Destinataire (votre adresse e-mail) */
-    $to = 'contact@icp-plomberie.fr';
+    $to = 'Icp.entreprise.contact@gmail.com';
       
     /* Construction du message */
     $msg  = 'Bonjour,'."\r\n\r\n";
@@ -158,10 +158,10 @@ if (isset($_POST['envoye']))
           <img src="./icons/home-icon.svg" alt="home icon">
           <p>36 Rue de l’isle-adam, 95520 Mery sur Oise</p>
         </div>
-        <div class="tel">
-          <img src="./icons/tel-icon.svg" alt="tel icon">
-          <p>06 00 00 00 00</p>
-        </div>
+        <a href="mailto:Icp.entreprise.contact@gmail.com" class="tel">
+          <img src="./icons/mail-icon.svg" alt="mail icon">
+          <p>Icp.entreprise.contact@gmail.com</p>
+        </a>
       </div>
     </section>
 

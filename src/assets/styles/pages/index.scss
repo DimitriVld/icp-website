@@ -261,6 +261,7 @@
 
                 @include tablet-landscape{
                     margin: 200px auto;
+                    padding: 46px 20px;
                     float: initial;
                     width: initial;
                 }
@@ -299,6 +300,7 @@
     
                     img{
                         margin-right: 10px;
+                        width: 2em;
                     }
                 }
     
@@ -313,10 +315,11 @@
     
                     img{
                         margin-right: 10px;
+                        width: 2em;
                     }
                 }
 
-                a{
+                .button-contact{
                     display: block;
                     margin: 30px auto 0;
                     padding: 10px 17px;

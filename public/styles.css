@@ -1164,6 +1164,7 @@ textarea {
     @media (max-width: 1024px) {
       .index-page .section-index-3 .map .card {
         margin: 200px auto;
+        padding: 46px 20px;
         float: initial;
         width: initial; } }
     .index-page .section-index-3 .map .card p {
