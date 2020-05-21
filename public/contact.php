@@ -111,9 +111,7 @@ if (isset($_POST['envoye']))
         <div class="points"></div>
         <h3>Parlez-nous de vos besoins</h3>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, 
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book
+          Un renseignement ? Une demande de devis ? Nous aurons toujours une solution adaptée à vos besoins. Nous vous recontacterons très rapidement. 
         </p>
 
         <fieldset>
@@ -155,7 +153,7 @@ if (isset($_POST['envoye']))
       <div class="right-contact">
         <div class="bg-img"></div>
         <div class="points"></div>
-        <h3>ICP Installateur Chauffage Plomberie</h3>
+        <h3>I.C.P Installateur Chauffage Plomberie</h3>
         <div class="adress">
           <img src="./icons/home-icon.svg" alt="home icon">
           <p>36 Rue de l’isle-adam, 95520 Mery sur Oise</p>

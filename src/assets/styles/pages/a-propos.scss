@@ -161,11 +161,18 @@
 
             .photo{
                 width: 45%;
-                background-color: #AAA;
+                background-image: url('/images/profil.jpeg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
 
                 @include tablet-landscape{
-                    height: 250px;
+                    height: 350px;
                     width: 100%;
+                    border-bottom-right-radius: initial;
+                    border-top-left-radius: 6px;
                 }
             }
         }
