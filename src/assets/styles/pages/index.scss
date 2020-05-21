@@ -179,7 +179,11 @@
                 color: $red;
                 font-size: 1em;
                 transition: all .5s;
+                text-align: center;
                 white-space: nowrap;
+                @include mobile-landscape{
+                    width: 50%;
+                }
                 &:hover{
                     background-color: $red;
                     color: $white;

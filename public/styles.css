@@ -1105,7 +1105,11 @@ textarea {
       color: #CC0F37;
       font-size: 1em;
       transition: all .5s;
+      text-align: center;
       white-space: nowrap; }
+      @media (max-width: 720px) {
+        .index-page .section-index-2 .bg a {
+          width: 50%; } }
       .index-page .section-index-2 .bg a:hover {
         background-color: #CC0F37;
         color: #fff;

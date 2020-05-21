@@ -44,7 +44,7 @@ if (isset($_POST['envoye']))
   } elseif (!isset($_COOKIE['sent']))
   {
     /* Destinataire (votre adresse e-mail) */
-    $to = 'dimitri.vildina@gmail.com';
+    $to = 'contact@icp-plomberie.fr';
       
     /* Construction du message */
     $msg  = 'Bonjour,'."\r\n\r\n";
