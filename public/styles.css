@@ -815,13 +815,15 @@ textarea {
       align-items: center;
       margin-top: 30px; }
       .contact-page .section-contact .right-contact .adress img {
-        margin-right: 10px; }
+        margin-right: 10px;
+        width: 2em; }
     .contact-page .section-contact .right-contact .tel {
       display: flex;
       align-items: center;
       margin-top: 30px; }
       .contact-page .section-contact .right-contact .tel img {
-        margin-right: 10px; }
+        margin-right: 10px;
+        width: 2em; }
 
 .a-propos-page .points {
   width: 100%;
@@ -988,7 +990,7 @@ textarea {
 
 .index-page .header-index {
   padding: 200px 0 140px;
-  background-image: url("/images/bg-home.svg");
+  background-image: url("/images/bg-home@2x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -1002,18 +1004,6 @@ textarea {
         font-size: 2em;
         width: auto;
         text-align: center; } }
-    .index-page .header-index h1::after {
-      content: '';
-      position: absolute;
-      left: 10px;
-      top: 25px;
-      display: block;
-      height: 25px;
-      width: 100%;
-      background: #CC0F3733 0% 0% no-repeat padding-box; }
-      @media (max-width: 900px) {
-        .index-page .header-index h1::after {
-          content: initial; } }
   .index-page .header-index p {
     margin-top: 50px;
     width: 50%;
@@ -1147,7 +1137,7 @@ textarea {
   padding: 139px 0;
   margin-top: 50px;
   height: 643px;
-  background-image: url("/images/map.svg");
+  background-image: url("/images/map@2x.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -1168,7 +1158,7 @@ textarea {
         float: initial;
         width: initial; } }
     .index-page .section-index-3 .map .card p {
-      font-size: 1.1em;
+      font-size: 1em;
       line-height: 20px; }
     .index-page .section-index-3 .map .card h3 {
       position: relative;
@@ -1192,7 +1182,8 @@ textarea {
         .index-page .section-index-3 .map .card .adress {
           justify-content: center; } }
       .index-page .section-index-3 .map .card .adress img {
-        margin-right: 10px; }
+        margin-right: 10px;
+        width: 2em; }
     .index-page .section-index-3 .map .card .tel {
       display: flex;
       align-items: center;
@@ -1201,8 +1192,9 @@ textarea {
         .index-page .section-index-3 .map .card .tel {
           justify-content: center; } }
       .index-page .section-index-3 .map .card .tel img {
-        margin-right: 10px; }
-    .index-page .section-index-3 .map .card a {
+        margin-right: 10px;
+        width: 2em; }
+    .index-page .section-index-3 .map .card .button-contact {
       display: block;
       margin: 30px auto 0;
       padding: 10px 17px;

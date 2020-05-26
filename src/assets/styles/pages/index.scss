@@ -30,7 +30,7 @@
     // HEADER
     .header-index{
         padding: 200px 0 140px;
-        background-image: url('/images/bg-home.svg');
+        background-image: url('/images/bg-home@2x.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -45,20 +45,6 @@
                 font-size: 2em;
                 width: auto;
                 text-align: center;
-            }
-            &::after{
-                content: '';
-                position: absolute;
-                left: 10px;
-                top: 25px;
-                display: block;
-                height: 25px;
-                width: 100%;
-                background: #CC0F3733 0% 0% no-repeat padding-box;
-
-                @include media(900px){
-                    content: initial;
-                }
             }
         }
 
@@ -242,7 +228,7 @@
             padding: 139px 0;
             margin-top: 50px;
             height: 643px;
-            background-image: url('/images/map.svg');
+            background-image: url('/images/map@2x.jpg');
             background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
@@ -267,7 +253,7 @@
                 }
 
                 p{
-                    font-size: 1.1em;
+                    font-size: 1em;
                     line-height: 20px;
                 }
 
